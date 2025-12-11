@@ -1,14 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
         <title>BeanUp</title>
+        <link rel="stylesheet" href="FirstPage.css">
     </head>
     <body bgcolor="f6edda">
-          <img src="BeanUp.png"   alt="logo"/> <br>
           <div class="container">
-            <a href="login.html" class="box">Login</a>
-            <a href="Signup.html" class="box">Sign up</a>
+            <img src="BeanUp.png" alt="logo" class="logo">
           </div>
+
+          <div class="switch-buttons">
+            <a href="login.html" class="switch active">Login</a>
+            <a href="signup.html" class="switch">Sign up</a>
+          </div>
+
+          <div class="form-box">
+        <form>
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button class="submit-btn">Login</button>
+        </form>
+    </div>
     
     </body>
 </html>
