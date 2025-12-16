@@ -1,3 +1,4 @@
+const formBox = document.querySelector(".form-box form");
 formBox.addEventListener("submit", function(e){
     e.preventDefault(); 
 

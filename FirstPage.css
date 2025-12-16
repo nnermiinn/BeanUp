@@ -41,11 +41,15 @@ h1 a {
     color: #3b2f2f;
     font-weight: bold;
     transition: 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    
+   
 }
 
 h1 a:hover {
     background-color: #d1c7a3;
     color: black;
+    
 }
 
 @media (max-width: 600px) {
