@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f6edda;
+    color: #66544a;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #503225;
+    animation: fadeIn 1.2s ease-in;
+}
+
+.header h1 {
+    font-size: 3rem;
+}
+
+.header p {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #503225;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #66544a;
+    display: inline-block;
+    width: fit-content;
+}
+.values h2,
+.our-coffees h2,
+.baristas h2 {
+    display: block;       
+    text-align: center;   
+    margin: 0 auto 20px;  
+}
+
+.about-us {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.about-us p,
+.location p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.values-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.value-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    min-width: 220px;
+    max-width: 300px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+}
+
+.coffee-cards,
+.barista-cards {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.coffee-card,
+.barista-card {
+    background: #fff;
+    width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s;
+}
+
+.coffee-card:hover,
+.barista-card:hover {
+    transform: translateY(-5px);
+}
+
+.coffee-card img,
+.barista-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.location {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    background-color: #503225;
+    color: #f6edda;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .coffee-card,
+    .barista-card {
+        width: 90%;
+        max-width: 320px;
+    }
+
+    .header h1 {
+        font-size: 2.3rem;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+}
