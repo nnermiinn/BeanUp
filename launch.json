@@ -4,8 +4,8 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Hap faqja e 3.html",
-            "file": "${workspaceFolder}/faqja e 3.html"
+            "name": "Open BeanUp in Chrome",
+            "file": "${workspaceFolder}/index.html"
         }
     ]
 }
