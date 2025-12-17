@@ -15,7 +15,6 @@ body {
     text-align: center;
     margin-bottom: 50px;
     color: #503225;
-    animation: fadeIn 1.2s ease-in;
 }
 
 .header h1 {
@@ -39,12 +38,13 @@ h2 {
     display: inline-block;
     width: fit-content;
 }
+
 .values h2,
 .our-coffees h2,
 .baristas h2 {
-    display: block;       
-    text-align: center;   
-    margin: 0 auto 20px;  
+    display: block;
+    text-align: center;
+    margin: 0 auto 20px;
 }
 
 .about-us {
@@ -73,12 +73,6 @@ h2 {
     border-radius: 12px;
     min-width: 220px;
     max-width: 300px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-}
-
-.value-card:hover {
-    transform: translateY(-5px);
 }
 
 .coffee-cards,
@@ -94,15 +88,8 @@ h2 {
     background: #fff;
     width: 350px;
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     text-align: center;
     padding: 15px;
-    transition: transform 0.3s;
-}
-
-.coffee-card:hover,
-.barista-card:hover {
-    transform: translateY(-5px);
 }
 
 .coffee-card img,
@@ -126,29 +113,8 @@ footer {
     border-radius: 10px;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@media (max-width: 768px) {
-    .coffee-card,
-    .barista-card {
-        width: 90%;
-        max-width: 320px;
-    }
-
-    .header h1 {
-        font-size: 2.3rem;
-    }
-
-    h2 {
-        font-size: 1.7rem;
-    }
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
 }

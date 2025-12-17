@@ -4,7 +4,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f6edda; 
+    background-color: #f6edda;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -19,7 +19,6 @@ body {
     border-radius: 12px;
     text-align: center;
     border: 2px solid #66544a;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .signup-container h2 {
@@ -51,14 +50,9 @@ body {
     padding: 14px;
     border: none;
     border-radius: 6px;
-    background-color: #66544a; 
+    background-color: #66544a;
     color: white;
     font-size: 16px;
-    cursor: pointer;
-}
-
-.signup-container button:hover {
-    background-color: #503225;
 }
 
 .signup-container p {
@@ -71,4 +65,9 @@ body {
     color: #66544a;
     text-decoration: none;
     font-weight: bold;
+}
+footer a {
+    color: #ffffff;   
+    text-decoration: none; 
+    margin: 0 15px;      
 }
