@@ -45,3 +45,38 @@ if ($name === '' || $surname === '' || $email === '' || $password === '' || $con
         }
     }
 }
+?>
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="faqja e 3.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div class="signup-container">
+    <h2>SIGN UP</h2>
+
+    <form method="POST" action="faqja e 3.php" novalidate>
+
+        <input type="text" name="name" placeholder="Name" required
+            value="<?= htmlspecialchars($_POST['name'] ?? '') ?>">
+
+        <input type="text" name="surname" placeholder="Surname" required
+            value="<?= htmlspecialchars($_POST['surname'] ?? '') ?>">
+
+        <input type="email" name="email" placeholder="Email" required
+            value="<?= htmlspecialchars($_POST['email'] ?? '') ?>">
+
+        <input type="password" name="password" placeholder="Password" required>
+
+        <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+
+        <button type="submit">Sign Up</button>
+
+</div>
+
+</body>
+</html>
