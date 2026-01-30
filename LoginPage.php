@@ -33,3 +33,51 @@ if ($_SERVER['REQUEST_METHOD']=='POST'){
       }
    }
 }
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="script.js"></script>
+    <meta charset="UTF-8">
+    <title>BeanUp☕</title>
+    <link rel="stylesheet" href="LoginPage.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body style="background-color: #f6edda;">
+
+    <div class="container">
+        <img src="images/BeanUp.png" alt="logo" class="logo">
+    </div>
+
+    <div class="switch-buttons">
+        <a href="login.php" class="switch active">Login</a>
+        <a href="register.php" class="switch">Sign up</a>
+    </div>
+
+    <div class="form-box">
+        <form method="POST" action="login.php" >
+            <input 
+                type="email" 
+                name="email" 
+                placeholder="Email" 
+                required value="<?= htmlspecialchars($_POST['email'] ??'') ?>">
+
+            <input 
+                type="password" 
+                name="password" 
+                placeholder="Password" 
+                required >
+
+            <button class="submit-btn" type="submit">Login</button>
+
+            <?php if ($error): ?>
+                <p style="color:red; text-align:center; margin-top:10px;">
+                    <?= htmlspecialchars($error) ?>
+                </p>
+            <?php endif; ?>
+        </form>
+    </div>
+
+</body>
+</html>
