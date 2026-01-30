@@ -24,9 +24,9 @@ if ($_SERVER['REQUEST_METHOD']=='POST'){
         auth::login($user);
         
     if ($user['role']==='admin') {
-       header("Location: dashboard/index.php");
+       header("Location: index.php");
     } else {
-       header("Location: home.php");
+       header("Location: HomePage.php");
        }
        exit;
 
