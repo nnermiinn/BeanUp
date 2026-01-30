@@ -76,6 +76,25 @@ if ($name === '' || $surname === '' || $email === '' || $password === '' || $con
 
         <button type="submit">Sign Up</button>
 
+
+        <?php if ($error): ?>
+            <p style="color:red; margin-top:10px;">
+                <?= htmlspecialchars($error) ?>
+            </p>
+        <?php endif; ?>
+
+        <?php if ($success): ?>
+            <p style="color:green; margin-top:10px;">
+                <?= htmlspecialchars($success) ?>
+            </p>
+        <?php endif; ?>
+
+    </form>
+
+    <p>
+    You have an account?
+        <a href="LoginPage.php">Log In</a>
+    </p>
 </div>
 
 </body>
