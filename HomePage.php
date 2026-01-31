@@ -49,3 +49,31 @@ $products = $stmt->fetchAll();
         >
     </form>
 </header>
+
+
+<?php if (empty($products)): ?>
+    <p style="text-align:center; margin-top:40px;">
+        Asnjë kafe nuk u gjet ☕
+    </p>
+<?php endif; ?>
+
+<?php foreach ($products as $index => $p): ?>
+
+    <div class="card <?= ($index % 2 === 1) ? 'reverse' : '' ?>">
+        <img src="images/coffee1.jpg" alt="coffee">
+
+
+        <div class="text">
+            <h1><?= htmlspecialchars($p['name']) ?></h1>
+            <p><i><?= htmlspecialchars($p['description']) ?></i></p>
+            <h2><?= number_format((float)$p['price'], 2) ?>€</h2>
+        </div>
+
+        <form method="POST" action="order_add.php">
+            <input type="hidden" name="product_id" value="<?= (int)$p['id'] ?>">
+            <button class="order-btn" type="submit">
+                Order
+            </button>
+        </form>
+    </div>
+<?php endforeach; ?>
