@@ -33,6 +33,22 @@ $user = Auth::user();
     <?php endif; ?>
 </header>
 
+<section class="about-us">
+    <h2>Rreth Nesh</h2>
+    <p>
+        BeanUp lindi nga dashuria për kafenë cilësore dhe ambientet e ngrohta.
+        Çdo filxhan përgatitet me përkushtim, duke sjellë shije autentike dhe
+        eksperiencë unike për çdo klient.
+    </p>
+</section>
+
+<section class="values">
+    <h2>Pse BeanUp?</h2>
+        <div class="values-container">
+        <div class="value-card">
+    <h3>☕ Kafe Cilësore</h3>
+        <p>Kokrrat tona përzgjidhen me kujdes nga ferma të njohura.</p>
+    </div>
 
 </body>
 </html>
