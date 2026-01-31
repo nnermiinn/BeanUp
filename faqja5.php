@@ -119,5 +119,16 @@ $user = Auth::user();
     </p>
 </section>
 
+<footer>
+    <p>2025 BeanUp | Kafene e vogël me zemër të madhe ☕</p>
+
+    <nav>
+        <a href="HomePage.php">Home</a>
+        <a href="faqja5.php">About us</a>
+        <a href="faqja6.php">Contact</a>
+        <a href="LoginPage.php">Login/Sign up</a>
+    </nav>
+</footer>
+
 </body>
 </html>
