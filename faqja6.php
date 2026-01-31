@@ -32,3 +32,50 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     }
 }
+?>
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontakti</title>
+    <link rel="stylesheet" href="faqja6.css" />
+</head>
+
+<body>
+
+<header class="header">
+    <h1>BeanUp</h1>
+    <p>Kafene e Vogël, Aromë e Madhe ☕</p>
+</header>
+
+<section class="container">
+
+    <div class="info-grid">
+
+        <div class="info-box">
+            <h3>📞 Nr Telefonit</h3>
+            <p>044-876-452</p>
+        </div>
+
+    <div class="info-box">
+            <h3>📲 WhatsApp</h3>
+            <p>+383-44-876-452</p>
+    </div>
+
+    <div class="info-box">
+            <h3>✉️ Email</h3>
+            <p>filan@festeku.com</p>
+    </div>
+
+    <div class="info-box">
+            <h3>🍵 Kafja jonë</h3>
+            <p>📍 Rruga Qendra 123, pranë parkut kryesor</p>
+    </div>
+
+    <div class="info-image">
+            <img src="images/vendi.jpg" alt="Foto e vendit">
+    </div>
+
+</body>
+</html>
