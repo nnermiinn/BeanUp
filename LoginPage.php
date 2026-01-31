@@ -1,8 +1,8 @@
 <?php
-require_DIR_."/app/core/database.php";
-require_DIR_."/app/core/auth.php";
-auth::start();
-$error=;
+require_DIR_ . "/app/core/database.php";
+require_DIR_ . "/app/core/auth.php";
+Auth::start();
+$error='';
 if ($_SERVER['REQUEST_METHOD']=='POST'){
   $email=trim($_POST['email']??'');
   $password=$_POST['password']??'';
