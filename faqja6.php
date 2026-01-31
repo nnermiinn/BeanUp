@@ -86,9 +86,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <div class="form-group">
                 <label>Emri *</label>
-                <input type="text" name="full_name" placeholder="Emri juaj"
-                    required value="<?= htmlspecialchars($_POST['full_name'] ?? '') ?>">
+                <input type="text" name="full_name" placeholder="Emri juaj" required value="<?= htmlspecialchars($_POST['full_name'] ?? '') ?>">
             </div>
+
+<div class="form-group">
+        <label>Email *</label>
+        <input type="email" name="email" placeholder="Emaila jote" required value="<?= htmlspecialchars($_POST['email'] ?? '') ?>">
+</div>
+
+<div class="form-group">
+        <label>Produkti</label>
+        <input type="text" name="product" placeholder="Produkti juaj" value="<?= htmlspecialchars($_POST['product'] ?? '') ?>">
+</div>
+
+<div class="form-group">
+        <label>Koment *</label>
+        <textarea name="message" placeholder="Shkruani komentin..." required><?= htmlspecialchars($_POST['message'] ?? '') ?></textarea>
+</div>
 
 </body>
 </html>
