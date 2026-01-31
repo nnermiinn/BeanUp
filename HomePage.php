@@ -18,10 +18,22 @@ if ($search !== '') {
     );
 
     $stmt->execute(["%$search%", "%$search%"]);
-    
+
 } else {
 $stmt = $pdo->query("SELECT * FROM products ORDER BY id DESC");
 }
 
 $products = $stmt->fetchAll();
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BeanUp</title>
+    <link rel="stylesheet" href="HomePage.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<header>
