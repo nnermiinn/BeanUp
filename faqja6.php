@@ -77,5 +77,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <img src="images/vendi.jpg" alt="Foto e vendit">
     </div>
 
+</div>
+
+<div class="form-box">
+    <h2>Na Kontakto</h2>
+
+    <form method="POST" action="faqja6.php" novalidate>
+
+            <div class="form-group">
+                <label>Emri *</label>
+                <input type="text" name="full_name" placeholder="Emri juaj"
+                    required value="<?= htmlspecialchars($_POST['full_name'] ?? '') ?>">
+            </div>
+
 </body>
 </html>
