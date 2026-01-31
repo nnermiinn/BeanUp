@@ -74,5 +74,19 @@ $user = Auth::user();
         <p>Aromë e fuqishme për një fillim energjik.</p>
     </div>
 
+        <div class="coffee-card">
+            <img src="images/cappuccino.jpg" alt="Cappuccino">
+            <h3>Cappuccino</h3>
+            <p>Balancë perfekte mes kafesë dhe qumështit.</p>
+        </div>
+
+        <div class="coffee-card">
+             <img src="images/laatte.jpg" alt="Latte">
+             <h3>Latte</h3>
+             <p>I butë, i ngrohtë dhe relaksues.</p>
+        </div>
+    </div>
+</section>
+
 </body>
 </html>
