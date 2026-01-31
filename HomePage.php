@@ -77,3 +77,19 @@ $products = $stmt->fetchAll();
         </form>
     </div>
 <?php endforeach; ?>
+
+<footer>
+    <nav>
+        <a href="HomePage.php">Home</a>
+        <a href="faqja5.php">About us</a>
+        <a href="faqja6.php">Contact</a>
+
+        <?php if ($user): ?>
+            <a href="LoginPage.php">Login/ Sign up</a>
+        <?php endif; ?>
+    </nav>
+</footer>
+
+
+</body>
+</html> 
