@@ -88,5 +88,28 @@ $user = Auth::user();
     </div>
 </section>
 
+<section class="baristas">
+    <h2>Baristat Tonë</h2>
+
+    <div class="barista-cards">
+        <div class="barista-card">
+            <img src="images/barista1.jpg" alt="Barista Ana">
+            <h3>Ana K.</h3>
+            <p>Specialiste në espresso dhe latte art.</p>
+        </div>
+    <div class="barista-card">
+            <img src="images/barista2.jpg" alt="Barista Ardi">
+            <h3>Ardi M.</h3>
+            <p>Mjeshtër i cappuccino-s dhe kafesë klasike.</p>
+    </div>
+
+    <div class="barista-card">
+            <img src="images/barista3.jpg" alt="Barista Elira">
+            <h3>Elira B.</h3>
+            <p>Krijuese shijesh dhe gjithmonë me buzëqeshje.</p>
+        </div>
+    </div>
+</section>
+
 </body>
 </html>
