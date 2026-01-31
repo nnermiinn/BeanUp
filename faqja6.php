@@ -124,6 +124,39 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </section>
 
 <footer>
+    <div class="footer-container">
+
+        <div>
+            <h4>BeanUp</h4>
+            <p>Kafene e Vogël, Aromë e Madhe ☕.</p>
+        </div>
+
+        <div>
+            <h4>Kafeja jonë</h4>
+            <ul>
+                <li>Home</li>
+                <li>Rreth nesh</li>
+                <li>Shërbimi</li>
+                <li>Kontakti</li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Na Kontakto</h4>
+            <p>📍 Rruga Qendra 123, pranë parkut kryesor</p>
+            <p>044-876-452</p>
+            <p>filan@festeku.com</p>
+        </div>
+
+        <nav>
+            <a href="HomePage.php">Home</a> 
+            <a href="faqja5.php">About us</a> 
+            <a href="faqja6.php">Contact</a> 
+            <a href="LoginPage.php">Login/Sign up</a> 
+        </nav>
+
+    </div>
+</footer>
 
 </body>
 </html>
