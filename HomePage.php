@@ -37,3 +37,15 @@ $products = $stmt->fetchAll();
 <body>
 
 <header>
+    <img src="images/BeanUp.png" alt="logo" class="logo">
+
+    <form method="GET" action="home page.php">
+        <input
+            type="text"
+            name="q"
+            placeholder="Search your coffee..."
+            class="search"
+            value="<?= htmlspecialchars($search) ?>"
+        >
+    </form>
+</header>
