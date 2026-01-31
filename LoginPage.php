@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST'){
     if(!$user || !password_verify($password,$user['password hash'])){
       $error="Email ose password gabim.";
     }else{
-        auth::login($user);
+        Auth::login($user);
         
     if ($user['role']==='admin') {
        header("Location: index.php");
@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST'){
       }
    }
 }
-
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -81,4 +81,4 @@ if ($_SERVER['REQUEST_METHOD']=='POST'){
     </div>
 
 </body>
-</html>
+</html
