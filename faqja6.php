@@ -104,5 +104,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <textarea name="message" placeholder="Shkruani komentin..." required><?= htmlspecialchars($_POST['message'] ?? '') ?></textarea>
 </div>
 
+<button class="btn" type="submit">Dërgo</button>
+
+        <?php if ($error): ?>
+            <p style="color:red; margin-top:15px;">
+            <?= htmlspecialchars($error) ?>
+            </p>
+        <?php endif; ?>
+
+        <?php if ($success): ?>
+            <p style="color:green; margin-top:15px;">
+                <?= htmlspecialchars($success) ?>
+            </p>
+        <?php endif; ?>
+
+        </form>
+    </div>
+
+</section>
+
+<footer>
+
 </body>
 </html>
