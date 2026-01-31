@@ -44,10 +44,34 @@ $user = Auth::user();
 
 <section class="values">
     <h2>Pse BeanUp?</h2>
-        <div class="values-container">
-        <div class="value-card">
+            <div class="values-container">
+            <div class="value-card">
     <h3>☕ Kafe Cilësore</h3>
         <p>Kokrrat tona përzgjidhen me kujdes nga ferma të njohura.</p>
+        </div>
+
+        <div class="value-card">       
+        <h3>🏡 Ambient i Ngrohtë</h3>
+        <p>Një vend ideal për miq, punë apo relaks.</p>
+       </div>
+
+
+        <div class="value-card">
+        <h3>❤️ Shërbim me Zemër</h3>
+        <p>Çdo klient trajtohet si pjesë e familjes BeanUp.</p>
+        </div>
+    </div>
+</section>
+
+
+<section class="our-coffees">
+    <h2>Kafetë tona</h2>
+
+    <div class="coffee-cards">
+        <div class="coffee-card">
+        <img src="images/espressoo.jpg" alt="Espresso">
+        <h3>Espresso</h3>
+        <p>Aromë e fuqishme për një fillim energjik.</p>
     </div>
 
 </body>
