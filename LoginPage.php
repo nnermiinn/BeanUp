@@ -37,7 +37,6 @@ if ($_SERVER['REQUEST_METHOD']=='POST'){
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="script.js"></script>
     <meta charset="UTF-8">
     <title>BeanUp☕</title>
     <link rel="stylesheet" href="LoginPage.css">
@@ -51,23 +50,25 @@ if ($_SERVER['REQUEST_METHOD']=='POST'){
     </div>
 
     <div class="switch-buttons">
-        <a href="login.php" class="switch active">Login</a>
-        <a href="register.php" class="switch">Sign up</a>
+        <a href="LoginPage.php" class="switch active">Login</a>
+        <a href="faqja e 3.php" class="switch">Sign up</a>
     </div>
 
     <div class="form-box">
-        <form method="POST" action="login.php" >
+        <form method="POST" action="LoginPage.php" >
             <input 
                 type="email" 
                 name="email" 
                 placeholder="Email" 
-                required value="<?= htmlspecialchars($_POST['email'] ??'') ?>">
+                required value="<?= htmlspecialchars($_POST['email'] ??'') ?>"
+              >
 
             <input 
                 type="password" 
                 name="password" 
                 placeholder="Password" 
-                required >
+                required autocomplete="current-password"
+              >
 
             <button class="submit-btn" type="submit">Login</button>
 
