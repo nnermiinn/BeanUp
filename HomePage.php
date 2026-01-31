@@ -39,7 +39,7 @@ $products = $stmt->fetchAll();
 <header>
     <img src="images/BeanUp.png" alt="logo" class="logo">
 
-    <form method="GET" action="home page.php">
+    <form method="GET" action="HomePage.php">
         <input
             type="text"
             name="q"
@@ -60,7 +60,7 @@ $products = $stmt->fetchAll();
 <?php foreach ($products as $index => $p): ?>
 
     <div class="card <?= ($index % 2 === 1) ? 'reverse' : '' ?>">
-        <img src="images/coffee1.jpg" alt="coffee">
+        <img src="images/<?= htmlspecialchars($p['image']) ?>" alt="<?= htmlspecialchars($p['name']) ?>">
 
 
         <div class="text">
@@ -69,12 +69,8 @@ $products = $stmt->fetchAll();
             <h2><?= number_format((float)$p['price'], 2) ?>€</h2>
         </div>
 
-        <form method="POST" action="order_add.php">
-            <input type="hidden" name="product_id" value="<?= (int)$p['id'] ?>">
-            <button class="order-btn" type="submit">
-                Order
-            </button>
-        </form>
+       <button class="order-btn">Order</button>
+
     </div>
 <?php endforeach; ?>
 
