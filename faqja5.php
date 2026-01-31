@@ -111,5 +111,13 @@ $user = Auth::user();
     </div>
 </section>
 
+<section class="location">
+    <h2>Ku na gjeni?</h2>
+    <p>
+        📍 Rruga Qendra 123, pranë parkut kryesor.<br>
+        Ejani dhe shijoni një filxhan kafe në një ambient mikpritës.
+    </p>
+</section>
+
 </body>
 </html>
