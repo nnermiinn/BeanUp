@@ -8,8 +8,10 @@
 body {
     background-color: #f6edda;
     color: #66544a;
+    line-height: 1.6;
     padding: 20px;
 }
+
 
 .header {
     text-align: center;
@@ -26,6 +28,7 @@ body {
     font-style: italic;
 }
 
+
 section {
     margin-bottom: 50px;
 }
@@ -36,16 +39,8 @@ h2 {
     margin-bottom: 20px;
     border-bottom: 2px solid #66544a;
     display: inline-block;
-    width: fit-content;
 }
 
-.values h2,
-.our-coffees h2,
-.baristas h2 {
-    display: block;
-    text-align: center;
-    margin: 0 auto 20px;
-}
 
 .about-us {
     background: #fff;
@@ -54,11 +49,38 @@ h2 {
     text-align: center;
 }
 
-.about-us p,
-.location p {
+.about-us p {
     font-size: 1.1rem;
     line-height: 1.7;
 }
+
+
+.coffee-cards,
+.barista-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.coffee-card,
+.barista-card {
+    background: #fff;
+    width: 300px;
+    border-radius: 12px;
+    text-align: center;
+    padding: 15px;
+}
+
+.coffee-card img,
+.barista-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
 
 .values-container {
     display: flex;
@@ -75,46 +97,36 @@ h2 {
     max-width: 300px;
 }
 
-.coffee-cards,
-.barista-cards {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    flex-wrap: wrap;
-}
-
-.coffee-card,
-.barista-card {
-    background: #fff;
-    width: 350px;
-    border-radius: 12px;
-    text-align: center;
-    padding: 15px;
-}
-
-.coffee-card img,
-.barista-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
 
 .location {
     text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
 }
 
+/
 footer {
     text-align: center;
     background-color: #503225;
     color: #f6edda;
     padding: 20px;
     border-radius: 10px;
+    margin-top: 50px;
 }
 
 footer a {
     color: #ffffff;
     text-decoration: none;
     margin: 0 15px;
+}
+
+
+@media (max-width: 768px) {
+    .coffee-cards,
+    .barista-cards,
+    .values-container {
+        flex-direction: column;
+        align-items: center;
+    }
 }

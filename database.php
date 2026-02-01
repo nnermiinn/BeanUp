@@ -1,9 +1,10 @@
 <?php
+
 class Database{
-    private static $pdo=null;
+    private static $pdo = null;
 
 
-    public static function pdo(){
+    public static function pdo() {
         if(self::$pdo===null){
             $host="localhost";
             $db="BeanUp";
@@ -11,15 +12,25 @@ class Database{
             $pass="";
             $charset="utf8mb4";
 
-            $dns=
-            "mysql:host=$host;dbname=$db;charset=$charset";
-            $options=[
-                 PDO::ATTR_ERRMODE=>    PDO::ERRMODE_EXCEPTION,
+            $dns= "mysql:host=$host;dbname=$db;charset=$charset";
 
-                 PDO::ATTR_DEFAULT_FETCH_MODE=>   PDO::FETCH_ASSOC
-            ];
-            self::$pdo=new PDO($dsn,$user,$pass,$options);
+            try {
+                self::$pdo = new PDO(
+                    $dsn,
+                    $user,
+                    $pass,
+                [
+                 PDO::ATTR_ERRMODE              =>PDO::ERRMODE_EXCEPTION,
+
+                 PDO::ATTR_DEFAULT_FETCH_MODE   =>PDO::FETCH_ASSOC
+                ]
+            );
+                
+            }catch (PDOException $e) {
+                die("Database connection failed: " . $e->getMessage());
+            }
         }
+        
          return self::$pdo;
     }
 }

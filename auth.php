@@ -1,15 +1,16 @@
 <?php
 class Auth{
     public static function start(){
-        if(session status()===PHP_SESSION_NONE)session start();
+        if (session status() === PHP_SESSION_NONE)
+            session_start();
     }
     public static function user(){
         self::start();
-        return$_SESSION['user']??null;
+        return$_SESSION['user'] ?? null;
     }
     public static function login($userRow){
         self::start();
-        $SESSION['user']=[
+        $_SESSION['user']=[
             'id'=>$userRow['id'],
             'name'=>$userRow['name'],
             'surname'=>$userRow['surname'],
@@ -19,18 +20,19 @@ class Auth{
     }
     public static function logout(){
         self::start();
+        session_destroy();
     }
     public static function requireLogin(){
         self::start();
         if(!isset($_SESSION['user'])){
-         header("Location:login.php");
+         header("Location:LoginPage.php");
          exit;
         }
     }
     public static function requireAdmin(){
         self::requireLogin();
         if(($_SESSION['user']['role']??'')!=='admin'){
-            header ("Location:home.php")
+            header("Location:HomePage.php")
             exit;
         }
     }
