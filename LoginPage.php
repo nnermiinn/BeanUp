@@ -1,8 +1,10 @@
 <?php
-require_DIR_."/app/core/database.php";
-require_DIR_."/app/core/auth.php";
-auth::start();
-$error=;
+require __DIR__ . "/app/core/Database.php";
+require __DIR__ . "/app/core/Auth.php";
+
+Auth::start();
+
+$error='';
 if ($_SERVER['REQUEST_METHOD']=='POST'){
   $email=trim($_POST['email']??'');
   $password=$_POST['password']??'';
@@ -21,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST'){
     if(!$user || !password_verify($password,$user['password hash'])){
       $error="Email ose password gabim.";
     }else{
-        auth::login($user);
+        Auth::login($user);
         
     if ($user['role']==='admin') {
        header("Location: index.php");
@@ -33,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST'){
       }
    }
 }
-
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -81,4 +83,4 @@ if ($_SERVER['REQUEST_METHOD']=='POST'){
     </div>
 
 </body>
-</html>
+</html
