@@ -1,3 +1,2 @@
 [BeanUp-main.zip](https://github.com/user-attachments/files/24222936/BeanUp-main.zip)
-
-[Uploading PROJEKTI.zip…]()
+[PROJEKTI.zip](https://github.com/user-attachments/files/24987138/PROJEKTI.zip)
