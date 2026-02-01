@@ -22,8 +22,9 @@ if ($search !== '') {
 } else {
 $stmt = $pdo->query("SELECT * FROM products ORDER BY id DESC");
 }
+$products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-$products = [
+    $products = [
     ['name' => 'Espresso', 'description' => '100% kafe e grimcuar, ujë i nxehtë', 'price' => 1.50, 'image' => 'espresso.png'],
     ['name' => 'Macchiato', 'description' => '1 shot espresso + pak shkumë qumështi', 'price' => 1.80, 'image' => 'macchiato.png'],
     ['name' => 'Americano', 'description' => '1 shot espresso + 100+150 ml ujë i nxehtë', 'price' => 2.00, 'image' => 'americano.png'],
@@ -34,7 +35,8 @@ $products = [
     ['name' => 'Latte', 'description' => '1 shot espresso + 200 ml qumësht i avulluar + pak shkumë qumështi', 'price' => 2.70, 'image' => 'latte.png'],
     ['name' => 'Affogato', 'description' => '1 shot espresso mbi akullore vanilje', 'price' => 3.50, 'image' => 'affogato.png'],
     ['name' => 'Float White', 'description' => '1 shot espresso + 150+200 ml qumësht i avulluar + pak shkumë qumështi', 'price' => 2.80, 'image' => 'float white.png'],
-];
+
+    ];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -91,12 +93,16 @@ $products = [
         <a href="faqja5.php">About us</a>
         <a href="faqja6.php">Contact</a>
 
-        <?php if ($user): ?>
-            <a href="LoginPage.php">Login/ Sign up</a>
+        <?php if (!$user): ?>
+
+             <a href="LoginPage.php">Login</a>
+             <a href="faqja e 3.php">Sign Up</a>
+        <?php else: ?>
+            <span>Welcome, <?= htmlspecialchars($user['name']) ?>!</span>
+
         <?php endif; ?>
     </nav>
 </footer>
-
 
 </body>
 </html> 
