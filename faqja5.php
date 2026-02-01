@@ -1,113 +1,61 @@
 <?php
+require_once __DIR__ . "/app/core/Auth.php";
+require_once __DIR__ . "/app/models/Page.php";
+require_once __DIR__ . "/app/models/Coffee.php";
+require_once __DIR__ . "/app/models/Barista.php";
 
-require __DIR__ . "/app/core/Auth.php";
 Auth::start();
-
 $user = Auth::user();
+
+$pageModel = new Page();
+$pageAbout = $pageModel->getContent('about-us');
+
+$coffeeModel = new Coffee();
+$coffees = $coffeeModel->getAll();
+
+$baristaModel = new Barista();
+$baristas = $baristaModel->getAll();
 ?>
 <!DOCTYPE html>
 <html lang="sq">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BeanUp | Rreth Nesh</title>
     <link rel="stylesheet" href="faqja5.css" />
 </head>
-
 <body>
 
-<header class="header">
-    <h1>BeanUp</h1>
-    <p>Kafene e Vogël, Aromë e Madhe ☕</p>
-
-    <?php if ($user): ?>
-        <p style="margin-top:10px;">
-            Mirë se erdhe, <?= htmlspecialchars($user['name']) ?> 👋
-        </p>
-    <?php else: ?>
-        <p style="margin-top:10px;">
-            <a href="LoginPage.php" style="color:#503225; font-weight:bold;">
-                Login
-            </a>
-        </p>
-    <?php endif; ?>
-</header>
+<?php include 'includes/header.php'; ?>
 
 <section class="about-us">
-    <h2>Rreth Nesh</h2>
-    <p>
-        BeanUp lindi nga dashuria për kafenë cilësore dhe ambientet e ngrohta.
-        Çdo filxhan përgatitet me përkushtim, duke sjellë shije autentike dhe
-        eksperiencë unike për çdo klient.
-    </p>
+    <h2><?= htmlspecialchars($pageAbout['title'] ?? 'Rreth Nesh') ?></h2>
+    <p><?= nl2br(htmlspecialchars($pageAbout['content'] ?? 'BeanUp lindi nga dashuria për kafenë cilësore...')) ?></p>
 </section>
-
-<section class="values">
-    <h2>Pse BeanUp?</h2>
-            <div class="values-container">
-            <div class="value-card">
-    <h3>☕ Kafe Cilësore</h3>
-        <p>Kokrrat tona përzgjidhen me kujdes nga ferma të njohura.</p>
-        </div>
-
-        <div class="value-card">       
-        <h3>🏡 Ambient i Ngrohtë</h3>
-        <p>Një vend ideal për miq, punë apo relaks.</p>
-       </div>
-
-
-        <div class="value-card">
-        <h3>❤️ Shërbim me Zemër</h3>
-        <p>Çdo klient trajtohet si pjesë e familjes BeanUp.</p>
-        </div>
-    </div>
-</section>
-
 
 <section class="our-coffees">
     <h2>Kafetë tona</h2>
-
     <div class="coffee-cards">
+        <?php foreach($coffees as $coffee): ?>
         <div class="coffee-card">
-        <img src="images/espressoo.jpg" alt="Espresso">
-        <h3>Espresso</h3>
-        <p>Aromë e fuqishme për një fillim energjik.</p>
-    </div>
-
-        <div class="coffee-card">
-            <img src="images/cappuccino.jpg" alt="Cappuccino">
-            <h3>Cappuccino</h3>
-            <p>Balancë perfekte mes kafesë dhe qumështit.</p>
+            <img src="<?= htmlspecialchars($coffee['image']) ?>" alt="<?= htmlspecialchars($coffee['name']) ?>">
+            <h3><?= htmlspecialchars($coffee['name']) ?></h3>
+            <p><?= htmlspecialchars($coffee['description']) ?></p>
         </div>
-
-        <div class="coffee-card">
-             <img src="images/laatte.jpg" alt="Latte">
-             <h3>Latte</h3>
-             <p>I butë, i ngrohtë dhe relaksues.</p>
-        </div>
+        <?php endforeach; ?>
     </div>
 </section>
 
 <section class="baristas">
     <h2>Baristat Tonë</h2>
-
     <div class="barista-cards">
+        <?php foreach($baristas as $b): ?>
         <div class="barista-card">
-            <img src="images/barista1.jpg" alt="Barista Ana">
-            <h3>Ana K.</h3>
-            <p>Specialiste në espresso dhe latte art.</p>
+            <img src="<?= htmlspecialchars($b['image']) ?>" alt="<?= htmlspecialchars($b['name']) ?>">
+            <h3><?= htmlspecialchars($b['name']) ?></h3>
+            <p><?= htmlspecialchars($b['description']) ?></p>
         </div>
-    <div class="barista-card">
-            <img src="images/barista2.jpg" alt="Barista Ardi">
-            <h3>Ardi M.</h3>
-            <p>Mjeshtër i cappuccino-s dhe kafesë klasike.</p>
-    </div>
-
-    <div class="barista-card">
-            <img src="images/barista3.jpg" alt="Barista Elira">
-            <h3>Elira B.</h3>
-            <p>Krijuese shijesh dhe gjithmonë me buzëqeshje.</p>
-        </div>
+        <?php endforeach; ?>
     </div>
 </section>
 
@@ -119,16 +67,7 @@ $user = Auth::user();
     </p>
 </section>
 
-<footer>
-    <p>2025 BeanUp | Kafene e vogël me zemër të madhe ☕</p>
-
-    <nav>
-        <a href="HomePage.php">Home</a>
-        <a href="faqja5.php">About us</a>
-        <a href="faqja6.php">Contact</a>
-        <a href="LoginPage.php">Login/Sign up</a>
-    </nav>
-</footer>
+<?php include 'includes/footer.php'; ?>
 
 </body>
 </html>
